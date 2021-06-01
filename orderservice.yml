@@ -30,6 +30,7 @@
        #    } }''
       run_once: true
       when: 'rhpdsorder is not defined'
+
     - name: 'Preflight Varible check :: Tower variables when Tower Creds defined in Template'
     - block:
        - name: 'Preflight Varible check :: Org'
