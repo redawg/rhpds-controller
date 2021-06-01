@@ -45,7 +45,7 @@
          run_once: true
          when: 'towercredname is not defined'
       run_once: true
-      when: addawscreds == 'yes'
+      #when: addawscreds == 'yes'
 
 
 
@@ -84,4 +84,4 @@
         inputs:
           username: "{{aws_access_key}}"
           password: "{{aws_access_secret}}"
-      when: addawscreds == 'yes'
+      #when: addawscreds == 'yes'
