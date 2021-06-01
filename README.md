@@ -39,8 +39,7 @@ notes: 'Customer Activity - Proof of Concept provisioned by AnsibleAPI'
 rhpdsorder: '{ "action": "order", "resource": { "href":
   "https://rhpds.redhat.com/api/v3.0.0/service_templates/30000000000840",
   "check" : "t",
-  "notes" : " {{notes}} ",
-  "expiration" : "7"
+  "notes" : " {{notes}} "
   } }'
   </code></pre>
   
