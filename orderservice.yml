@@ -35,6 +35,8 @@
         msg: "'{{ lookup('env', 'TOWER_USERNAME') }}'"
         verbosity: 2
     - name: 'Preflight Varible check :: for AWS Creds api'
+      vars:
+        tower_un: "{{ lookup('env', 'TOWER_USERNAME') }}"
       block:
        - name: 'Preflight Varible check :: Org'
          fail: msg='Please include the Organization where the creds live to the variable "org"'
@@ -45,7 +47,7 @@
          run_once: true
          when: 'towercredname is not defined'
       run_once: true
-      when: "{{ lookup('env', 'TOWER_USERNAME') }} is defined"
+      when: 'tower_un is defined'
 
 
 
@@ -84,4 +86,4 @@
         inputs:
           username: "{{aws_access_key}}"
           password: "{{aws_access_secret}}"
-      #when: addawscreds == 'yes'
+      when: 'tower_un is defined'
