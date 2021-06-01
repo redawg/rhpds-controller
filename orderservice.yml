@@ -32,7 +32,7 @@
       when: 'rhpdsorder is not defined'
 
     - name: 'Preflight Varible check :: Tower variables when Tower Creds defined in Template'
-    - block:
+      block:
        - name: 'Preflight Varible check :: Org'
          fail: msg='Please include the Organization where the creds live to the variable "org"
          run_once: true
