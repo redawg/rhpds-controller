@@ -28,7 +28,7 @@ extra_vars:
 
 If you want to have this script create/update RHPDS AWS sandbox API KEY and SECRET you will need to Create Ansible Tower Creds
 
-<B>Create Custom Creds - RHPDS  </B>
+<B>Template Extravar Examples  </B>
 <pre class="line-number language-yaml"><code>
 ---
 org: Random Org
@@ -41,3 +41,5 @@ rhpdsorder: '{ "action": "order", "resource": { "href":
   "expiration" : "7"
   } }'
   </code></pre>
+  
+  <B>Template setup example - Notice added Custom Creds for RHPDS and Ansible Tower  </B>
