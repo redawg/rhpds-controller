@@ -2,6 +2,8 @@
 - name: Spinup RHPDS AWS Blank Enviornment
   hosts: all
   gather_facts: False
+  vars:
+    tower_un: "{{ lookup('env', 'TOWER_USERNAME') }}"
   tasks:
     - name: 'Preflight Varible check :: rhpdsurl'
       fail: msg='Please include the rhpdsurl to the variable "rhpdsurl" or create Custom Crediental for it'
@@ -35,8 +37,6 @@
         msg: "'{{ lookup('env', 'TOWER_USERNAME') }}'"
         verbosity: 2
     - name: 'Preflight Varible check :: for AWS Creds api'
-      vars:
-        tower_un: "{{ lookup('env', 'TOWER_USERNAME') }}"
       block:
        - name: 'Preflight Varible check :: Org'
          fail: msg='Please include the Organization where the creds live to the variable "org"'
