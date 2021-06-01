@@ -32,7 +32,7 @@
       when: 'rhpdsorder is not defined'
     - name: Show env variable fact
       debug:
-        msg: '{{ lookup('env', 'tower_username') }}'
+        msg: "'{{ lookup('env', 'tower_username') }}'"
         verbosity: 2
     - name: 'Preflight Varible check :: test'
       block:
