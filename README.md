@@ -44,5 +44,7 @@ rhpdsorder: '{ "action": "order", "resource": { "href":
   
   <B>Template setup example - Notice added Custom Creds for RHPDS and Ansible Tower  </B>
   
+  ![image](https://user-images.githubusercontent.com/17077661/120363581-2a5ac300-c2c1-11eb-8fc2-1a5c54dab9f6.png)
+
 
 
