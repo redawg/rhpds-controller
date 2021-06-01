@@ -16,7 +16,7 @@ INPUT CONFIGURATION:
     type: string
     label: Password
     secret: true
-   - id: url
+  - id: url
     type: string
     label: rhpdsurl
 </code></pre>
