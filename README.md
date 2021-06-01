@@ -42,7 +42,7 @@ rhpdsorder: '{ "action": "order", "resource": { "href":
   } }'
   </code></pre>
   
-  <B>Template setup example - Notice added Custom Creds for RHPDS and Ansible Tower  </B>
+  <B>Template setup example - Notice added Custom Creds for RHPDS and Ansible Tower - NOTE if you dont add Ansible Tower creds the Creds of AWS_RHPDS_API will not be created or updated!  </B>
   
   ![image](https://user-images.githubusercontent.com/17077661/120363581-2a5ac300-c2c1-11eb-8fc2-1a5c54dab9f6.png)
 
