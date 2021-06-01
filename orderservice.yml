@@ -32,7 +32,7 @@
       when: 'rhpdsorder is not defined'
     - name: Show new fact
       debug:
-        var: tower_username
+        var: TOWER_USERNAME
         verbosity: 2
     - name: 'Preflight Varible check :: test'
       block:
@@ -45,7 +45,7 @@
          run_once: true
          when: 'towercredname is not defined'
       run_once: true
-      when: 'tower_username is defined'
+      when: 'TOWER_USERNAME is defined'
 
 
 
