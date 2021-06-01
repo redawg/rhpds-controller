@@ -39,6 +39,10 @@
       fail: msg='Please include the Creds to update or change to the variable "towercredname"'
       run_once: true
       when: 'towercredname is not defined'
+    - name: 'Preflight Varible check :: test'
+      fail: msg='Please include the Creds to update or change to the variable "towercredname"'
+      run_once: true
+      when: 'tower_username is not defined'
 
 
 
