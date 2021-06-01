@@ -30,7 +30,10 @@
        #    } }''
       run_once: true
       when: 'rhpdsorder is not defined'
-
+    - name: Show new fact
+      debug:
+        var: tower_username
+        verbosity: 2
     - name: 'Preflight Varible check :: test'
       block:
        - name: 'Preflight Varible check :: Org'
