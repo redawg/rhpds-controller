@@ -32,7 +32,7 @@
       when: 'rhpdsorder is not defined'
     - name: Show env variable fact
       debug:
-        msg: "'{{ lookup('env', 'TOWER_USERNAME') }}'"
+        action: template src=templates/dumpall.j2 dest=/tmp/ansible.all
         verbosity: 2
     - name: 'Preflight Varible check :: test'
       block:
