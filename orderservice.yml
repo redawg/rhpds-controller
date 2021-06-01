@@ -45,7 +45,7 @@
          run_once: true
          when: 'towercredname is not defined'
       run_once: true
-      when: '"'{{ lookup('env', 'TOWER_USERNAME') }}'" is defined'
+      when: '"{{ lookup('env', 'TOWER_USERNAME') }} is defined"'
 
 
 
