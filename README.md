@@ -2,6 +2,7 @@
 This is a small repo for controlling/deploying RHPDS from Ansible controller
 
 You will need the following created:
+
 NOTE: Make sure you include ansible.tower collection - See requirements.yml
 
 <B>Create Custom Creds - RHPDS  </B>
