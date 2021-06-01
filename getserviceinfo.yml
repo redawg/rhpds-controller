@@ -1,3 +1,5 @@
+# This is for getting service info from catalog request. You need to have the service ID to get the info
+
 ---
 - name: Get Service info
   hosts: localhost
