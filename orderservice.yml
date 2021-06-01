@@ -32,9 +32,9 @@
       when: 'rhpdsorder is not defined'
     - name: Show env variable fact
       debug:
-        action: template src=templates/dumpall.j2 dest=/tmp/ansible.all
+        msg: "'{{ lookup('env', 'TOWER_USERNAME') }}'"
         verbosity: 2
-    - name: 'Preflight Varible check :: test'
+    - name: 'Preflight Varible check :: for AWS Creds api'
       block:
        - name: 'Preflight Varible check :: Org'
          fail: msg='Please include the Organization where the creds live to the variable "org"'
@@ -45,7 +45,7 @@
          run_once: true
          when: 'towercredname is not defined'
       run_once: true
-      #when: '{{ lookup('env', 'tower_username')}} is defined'
+      when: addawscreds == 'yes'
 
 
 
@@ -84,4 +84,4 @@
         inputs:
           username: "{{aws_access_key}}"
           password: "{{aws_access_secret}}"
-      when: 'tower_username is defined'
+      when: addawscreds == 'yes'
