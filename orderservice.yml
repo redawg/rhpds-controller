@@ -30,6 +30,17 @@
        #    } }''
       run_once: true
       when: 'rhpdsorder is not defined'
+    - name: 'Preflight Varible check :: Tower variables when Tower Creds defined in Template'
+    - block:
+       - name: 'Preflight Varible check :: Org'
+         fail: msg='Please include the Organization where the creds live to the variable "org"
+         run_once: true
+         when: 'org is not defined'
+       - name: 'Preflight Varible check :: towercredname'
+         fail: msg='Please include the Creds to update or change to the variable "towercredname"
+         run_once: true
+         when: 'towercredname is not defined'
+      when: 'tower_username is defined'
 
 
 
@@ -56,7 +67,7 @@
     - include: getservicecreds.yml
     - name: Add RHPDS AWS Creds to Controller
       ansible.tower.tower_credential:
-        name: "AWS_RHPDS_API"
+        name: "{{ towercredname }}"
         organization: "{{ org }}"
         state: present
         credential_type: Amazon Web Services
