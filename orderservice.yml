@@ -64,4 +64,4 @@
         inputs:
           username: "{{aws_access_key}}"
           password: "{{aws_access_secret}}"
-     when: 'tower_username is defined'
+      when: 'tower_username is defined'
