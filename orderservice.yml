@@ -27,8 +27,7 @@
        #  Example '{ "action": "order", "resource": { "href":
        #    "https://rhpds.redhat.com/api/v3.0.0/service_templates/30000000000840",
        #    "check" : "t",
-       #    "notes" : " {{notes}} ",
-       #    "expiration" : "7"
+       #    "notes" : " {{notes}} "
        #    } }''
       run_once: true
       when: 'rhpdsorder is not defined'
