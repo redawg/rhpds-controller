@@ -5,7 +5,7 @@
   hosts: localhost
   gather_facts: False
   tasks:
-    - name: Query Service Request Template for RHPDS Tasks please wait.....
+    - name: Query Service Request Template for RHPDS Tasks
       uri:
         url: "{{ rhpdsurl }}/api/v3.0.0/service_requests/{{serviceid}}?expand=request_tasks"
         user: "{{ rhpdsuser }}"
@@ -64,8 +64,8 @@
         jquery: "[?name ==`AWS_ACCESS_KEY_ID`].value"
     - name: Clean up Variables
       set_fact:
-        aws_access_key: "{{ aws_access_key_temp[0] | trim }}"
-        aws_access_secret: "{{ aws_access_secret_temp[0] | trim }}"
+        aws_access_key: "{{ aws_access_key_temp[0] | truncate(20,True,'') | trim }}"
+        aws_access_secret: "{{ aws_access_secret_temp[0] | truncate(40,True,'') | trim }}"
 
     - name: Display AWS Key and Secret
       debug:
