@@ -48,7 +48,7 @@
       run_once: true
       when: 'tower_un != ""'
 
-    - name: Request Service Template {{ catalogitem }} from RHPDS
+    - name: Request AWS OPEN Enviornment from Red Hat Open Environments {{ catalogitem }} from RHPDS
       uri:
         url: "{{ rhpdsurl }}/api/v3.0.0/service_catalogs/{{ catalogitem }}/service_templates"
         user: "{{ rhpdsuser }}"
