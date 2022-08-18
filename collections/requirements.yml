@@ -2,3 +2,4 @@
 collections:
 - name: ansible.tower
 - name: ansible.controller
+- name: community.general
