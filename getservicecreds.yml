@@ -43,12 +43,12 @@
       register: moreattributes
     - name: Searching project for AWS ACCESS KEY
       vars:
-        _query: "[?name ==`AWS_ACCESS_KEY_ID`].value"
+        _query: "[?name ==`Environment Info 004`].value"
       set_fact:
         aws_access_key_temp: "{{ moreattributes.json.custom_attributes|json_query(_query) }}"
     - name: Searching project for AWS SECRET KEY
       vars:
-        _query: "[?name ==`AWS_SECRET_ACCESS_KEY`].value"
+        _query: "[?name ==`Environment Info 005`].value"
       set_fact:
         aws_access_secret_temp: "{{ moreattributes.json.custom_attributes|json_query(_query) }}"
     - name: Clean up Variables
