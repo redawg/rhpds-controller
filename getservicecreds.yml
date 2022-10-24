@@ -53,13 +53,13 @@
         aws_access_secret_temp: "{{ moreattributes.json.custom_attributes|json_query(_query) }}"
     - name: Clean up Variables
       set_fact:
-        aws_access_key: "{{ aws_access_key_temp[19:39] }}"
-        aws_access_secret: "{{ aws_access_secret_temp[24:64] }}"
-        #aws_access_key: "{{ aws_access_key_temp[0] | split(' ') | last }}"
-        #aws_access_secret: "{{ aws_access_secret_temp[0] | split(' ') | last }}"
+        #aws_access_key: "{{ aws_access_key_temp[19:39] }}"
+        #aws_access_secret: "{{ aws_access_secret_temp[24:64] }}"
+        aws_access_key: "{{ aws_access_key_temp[0] | split(' ') | last[:-1] }}"
+        aws_access_secret: "{{ aws_access_secret_temp[0] | split(' ') | last[:-1 }}"
 
     - name: Display AWS Key and Secret
       debug:
        msg:
-        - "AWS ACCESS KEY: '{{aws_access_key}}'"
-        - "AWS SECRET KEY: '{{aws_access_secret}}'"
+        - "AWS ACCESS KEY: '{{ aws_access_key }}'"
+        - "AWS SECRET KEY: '{{ aws_access_secret }}'"
