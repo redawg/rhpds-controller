@@ -59,5 +59,5 @@
     - name: Display AWS Key and Secret
       debug:
        msg:
-        - "AWS ACCESS KEY: '{{aws_access_key}}'"
-        - "AWS SECRET KEY: '{{aws_access_secret}}'"
+        - "AWS ACCESS KEY: '{{aws_access_key[:20]}}'"
+        - "AWS SECRET KEY: '{{aws_access_secret[:40]}}'"
