@@ -64,8 +64,10 @@
         jquery: "[?name ==`Environment Info 004`].value"
     - name: Clean up Variables
       set_fact:
-        aws_access_key: "{{ aws_access_key_temp[0] | split(' ') | last }}"
-        aws_access_secret: "{{ aws_access_secret_temp[0] | split(' ') | last }}"
+        aws_access_key: "{{ aws_access_key_temp[:39] }}"
+        aws_access_secret: "{{ aws_access_secret_temp[:64] }}"
+        #aws_access_key: "{{ aws_access_key_temp[0] | split(' ') | last }}"
+        #aws_access_secret: "{{ aws_access_secret_temp[0] | split(' ') | last }}"
 
     - name: Display AWS Key and Secret
       debug:
