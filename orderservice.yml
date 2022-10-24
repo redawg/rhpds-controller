@@ -77,6 +77,6 @@
         credential_type: Amazon Web Services
         validate_certs: no
         inputs:
-          username: "{{aws_access_key}}"
-          password: "{{aws_access_secret}}"
+          username: "{{aws_access_key[:-1]}}"
+          password: "{{aws_access_secret[:-1]}}"
       when: 'tower_un != ""'
