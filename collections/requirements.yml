@@ -1,5 +1,5 @@
 ---
 collections:
-- name: ansible.tower
-- name: ansible.controller
-- name: community.general
+  - name: ansible.tower
+  - name: ansible.controller
+  - name: community.general
