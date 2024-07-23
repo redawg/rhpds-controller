@@ -6,15 +6,15 @@
     tower_un: "{{ lookup('env', 'TOWER_USERNAME') }}"
   tasks:
     - name: 'Preflight Varible check :: rhpdsurl'
-      fail: msg='Please include the rhpdsurl to the variable "rhpdsurl" or create Custom Crediental for it'
+      fail: msg='Please include the rhpdsurl to the variable "rhpdsurl" or create Custom Credential for it'
       run_once: true
       when: 'rhpdsurl is not defined'
     - name: 'Preflight Varible check :: rhpdsuser'
-      fail: msg='Please include the rhpdsuser to the variable "rhpdsuser" or create Custom Crediental for it'
+      fail: msg='Please include the rhpdsuser to the variable "rhpdsuser" or create Custom Credential for it'
       run_once: true
       when: 'rhpdsuser is not defined'
     - name: 'Preflight Varible check :: rhpdspass'
-      fail: msg='Please include the rhpdspass to the variable "rhpdspass" or create Custom Crediental for it'
+      fail: msg='Please include the rhpdspass to the variable "rhpdspass" or create Custom Credential for it'
       run_once: true
       when: 'rhpdspass is not defined'
     - name: 'Preflight Varible check :: catalogitem'
